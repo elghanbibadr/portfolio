@@ -13,8 +13,6 @@ import {
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -42,7 +40,7 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth horizontal="center" gap="m">
+       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (
             <RevealFx
@@ -99,8 +97,8 @@ export default function Home() {
             </Button>
           </RevealFx>
         </Column>
-      </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      </Column> 
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
@@ -122,8 +120,7 @@ export default function Home() {
             <Line maxWidth={48} />
           </Row>
         </Column>
-      )}
-      <Projects range={[2]} />
+      )} */}
       <Mailchimp />
     </Column>
   );

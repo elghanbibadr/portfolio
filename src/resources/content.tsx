@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Badr",
+  lastName: "Ghanbi",
+  name: `Badr Ghanbi`,
+  role: "Front End Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "bghanbi50@gmail.com",
+  location: "Europe/Vienna", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Aranic","French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -49,30 +49,30 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Turning ideas into seamless web experiences</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
+        <strong className="ml-4">My Upwork</strong>{" "}
+        <Line background="accent-alpha-medium" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Showcase
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "https://www.upwork.com/freelancers/~015c5fa1a95af5c54d",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
+    I’m Badr, a front-end engineer crafting intuitive, user-focused web apps,
+      {/* <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      /> */}
+    
+      <br />  In my spare time, I bring my own ideas to life through side projects.
     </>
   ),
 };
@@ -98,9 +98,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+  I love building scalable web applications and SaaS solutions. I specialize in modern technologies such as React, Next.js, and Tailwind CSS, and I’m passionate about transforming complex requirements into clean, user-focused digital experiences
       </>
     ),
   },
