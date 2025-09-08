@@ -93,7 +93,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
               image: `${baseURL}${person.avatar}`,
             }}
           />
-          <Column maxWidth="s" gap="16" horizontal="center" align="center">
+          {/* <Column maxWidth="s" gap="16" horizontal="center" align="center">
             <SmartLink href="/blog">
               <Text variant="label-strong-m">Blog</Text>
             </SmartLink>
@@ -101,7 +101,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
               {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
             </Text>
             <Heading variant="display-strong-m">{post.metadata.title}</Heading>
-          </Column>
+          </Column> */}
           <Row marginBottom="32" horizontal="center">
             <Row gap="16" vertical="center">
               <Avatar size="s" src={person.avatar} />

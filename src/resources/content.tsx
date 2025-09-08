@@ -107,42 +107,59 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
+        company: "Upwork",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Top Rated Front-End Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+      Built modern, responsive web applications with Next.js, React, and Tailwind CSS,Typescript ,Supabase delivering high-performing solutions for global clients.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+        Streamlined development workflows and optimized UI/UX, ensuring both scalability and exceptional user experience.
           </>,
+          <>
+          Achieved Top Rated status on Upwork by consistently exceeding client expectations, with projects spanning SaaS platforms, dashboards, and e-commerce.
+          </>,
+          <>
+Completed 50+ projects with over 500 hours of development, building modern, responsive web applications using Next.js, React, Tailwind CSS, TypeScript, and Supabase, delivering high-performing solutions for clients worldwide.          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+       
+        ],
+      },
+       {
+        company: "Green Phoenix Engineering",
+        timeframe: "2024 - Present",
+        role: "Front-End Developer",
+        achievements: [
+          <>
+Contributing to  a powerful CRM platform for real estate professionals designed to automate and streamline wholesale workflows. Key features include:          </>,
+          <>
+connect With Buyers Faster: Automate property distribution by buyer tags, analyze deals, estimate repairs and Max Allowable Offers (MAO), all in one unified platform.          </>,
+          <>
+AI Estimator: Quickly calculate job estimates based on property dimensions, materials, and brief descriptions.          </>,
+        
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+       
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Tajriba",
+        timeframe: "2023 - 2024",
+        role: "Front-End developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+           Collaborating with a dynamic team to develop Ajyal Academy, a comprehensive school management system, using Next.js, TypeScript, and Strapi.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+        Developing robust admin tools for monitoring registrations, generating invoices, analyzing subscription data, and managing activities across multiple locations.
           </>,
+          <>
+          Streamlining school operations and enhancing user experience for all stakeholders, including parents, administrators, and staff.
+          </>
         ],
         images: [],
       },
@@ -153,76 +170,105 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
+        name: "ENSA",
         description: <>Studied software engineering.</>,
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+
     ],
   },
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
-    skills: [
+ skills: [
+  {
+    title: "Next.js",
+    description: (
+      <>Building next-gen web applications with Next.js and Supabase.</>
+    ),
+    tags: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        name: "TypeScript",
+        icon: "typescript",
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+        name: "Next.js",
+        icon: "nextjs",
+      },
+      {
+        name: "Supabase",
+        icon: "supabase",
+      },
     ],
+
+  },
+  {
+    title: "React & Tailwind CSS",
+    description: (
+      <>Creating responsive, high-performance UI with React and Tailwind CSS.</>
+    ),
+    tags: [
+      {
+        name: "React",
+        icon: "react",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "tailwind",
+      },
+   
+    ],
+    images: [
+      {
+        src: "/images/projects/project-01/cover-03.jpg",
+        alt: "Project image",
+        width: 16,
+        height: 9,
+      },
+    ],
+  },
+  {
+  title: "Laravel & PHP",
+  description: (
+    <>Learning and building simple back-end applications using Laravel and PHP, working with databases, APIs, and server-side logic.</>
+  ),
+  tags: [
+    {
+      name: "Laravel",
+      icon: "laravel",
+    },
+    {
+      name: "PHP",
+      icon: "php",
+    },
+    {
+      name: "MySQL",
+      icon: "mysql",
+    },
+  ],
+ 
+},
+{
+  title: "Databases (SQL & MongoDB)",
+  description: (
+    <>Learning to work with databases, including designing schemas, querying data, and integrating SQL and MongoDB into applications.</>
+  ),
+  tags: [
+    {
+      name: "SQL",
+      icon: "sql",
+    },
+    {
+      name: "MongoDB",
+      icon: "mongodb",
+    },
+  ],
+  images: [
+ 
+  ],
+},
+
+],
+
   },
 };
 
@@ -252,46 +298,46 @@ const gallery: Gallery = {
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    // {
+    //   src: "/images/gallery/horizontal-1.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/vertical-4.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/horizontal-3.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/vertical-1.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/vertical-2.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+    // {
+    //   src: "/images/gallery/horizontal-2.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/horizontal-4.jpg",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src: "/images/gallery/vertical-3.jpg",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
   ],
 };
 

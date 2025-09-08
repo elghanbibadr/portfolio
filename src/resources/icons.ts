@@ -13,7 +13,8 @@ import {
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
 } from "react-icons/hi2";
-
+import { SiOpenai,SiClaude, } from "react-icons/si"; // OpenAI logo
+import { FaRobot } from "react-icons/fa";  // Robot icon
 import {
   PiHouseDuotone,
   PiUserCircleDuotone,
@@ -27,9 +28,17 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiLaravel,
+  SiMysql,
+  SiPhp,
+  SiNodedotjs,
+  SiMongodb,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -57,9 +66,20 @@ export const iconLibrary: Record<string, IconType> = {
   javascript: SiJavascript,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
+  typescript: SiTypescript,
+  openai: SiOpenai,
+  claud: SiClaude,
+  tailwind: SiTailwindcss,
+  react: SiReact,
+  mongodb: SiMongodb,
+  laravel: SiLaravel,
+  sql: SiMysql,
+  php: SiPhp,
+  nodejs: SiNodedotjs,
   figma: SiFigma,
   facebook: FaFacebook,
   pinterest: FaPinterest,
+
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
