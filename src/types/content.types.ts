@@ -39,7 +39,6 @@ export type Newsletter = {
   /** Title of the newsletter   */
   title: React.ReactNode;
   /** Description of the newsletter */
-  description: React.ReactNode;
 };
 
 /**
