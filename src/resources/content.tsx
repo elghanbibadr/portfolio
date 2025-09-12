@@ -8,8 +8,8 @@ const person: Person = {
   role: "Front End Engineer",
   avatar: "/images/avatar.jpg",
   email: "bghanbi50@gmail.com",
-  location: "Europe/Vienna", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Aranic","French"], // optional: Leave the array empty if you don't want to display languages
+  location: "Africa/Casablanca", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Arabic","French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -91,7 +91,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/badr-ghanbi-yeo9b5",
   },
   intro: {
     display: true,
