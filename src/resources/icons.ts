@@ -13,7 +13,7 @@ import {
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
 } from "react-icons/hi2";
-import { SiOpenai,SiClaude, } from "react-icons/si"; // OpenAI logo
+import { SiOpenai,SiClaude, SiUpwork, } from "react-icons/si"; // OpenAI logo
 import { FaRobot } from "react-icons/fa";  // Robot icon
 import {
   PiHouseDuotone,
@@ -47,6 +47,7 @@ export const iconLibrary: Record<string, IconType> = {
   globe: HiOutlineGlobeAsiaAustralia,
   person: PiUserCircleDuotone,
   grid: PiGridFourDuotone,
+  mail: HiEnvelope, // Fixed: using HiEnvelope instead of undefined 'mail'
   book: PiBookBookmarkDuotone,
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
@@ -66,6 +67,7 @@ export const iconLibrary: Record<string, IconType> = {
   javascript: SiJavascript,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
+  upwork: SiUpwork,
   typescript: SiTypescript,
   openai: SiOpenai,
   claud: SiClaude,

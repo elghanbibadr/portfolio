@@ -23,16 +23,16 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/elghanbibadr",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/badr-ghanbi-612a63208/",
   },
   {
-    name: "Threads",
-    icon: "threads",
+    name: "Twitter",
+    icon: "x",
     link: "https://www.threads.com/@once_ui",
   },
   {
@@ -40,6 +40,7 @@ const social: Social = [
     icon: "email",
     link: `mailto:${person.email}`,
   },
+
 ];
 
 const home: Home = {
@@ -217,12 +218,7 @@ AI Estimator: Quickly calculate job estimates based on property dimensions, mate
    
     ],
     images: [
-      {
-        src: "/images/projects/project-01/cover-03.jpg",
-        alt: "Project image",
-        width: 16,
-        height: 9,
-      },
+
     ],
   },
   {
@@ -288,6 +284,12 @@ const work: Work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
+const contact: any = {
+  path: "/contact",
+  label: "Contact",
+  title: `Contact – ${person.name}`,
+  description: `Get in touch with ${person.name}`,
+};
 
 const gallery: Gallery = {
   path: "/gallery",
@@ -340,4 +342,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery,contact};
