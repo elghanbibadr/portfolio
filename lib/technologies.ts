@@ -1,7 +1,7 @@
 export const TECHNOLOGIES = {
   nextjs: {
     name: "Next.js",
-    logo: "/icons/nextjs.svg",
+    logo: "/icons/nextdotjs.svg",
     color: "#000000",
   },
   react: {
@@ -11,7 +11,7 @@ export const TECHNOLOGIES = {
   },
   tailwind: {
     name: "Tailwind CSS",
-    logo: "/icons/tailwind.svg",
+    logo: "/icons/tailwindcss.svg",
     color: "#38BDF8",
   },
   supabase: {
@@ -36,7 +36,7 @@ export const TECHNOLOGIES = {
   },
   sql: {
     name: "SQL",
-    logo: "/icons/sql.svg",
+    logo: "/icons/mysql.svg",
     color: "#336791",
   },
 
@@ -51,4 +51,14 @@ export const TECHNOLOGIES = {
     logo: "/icons/stripe.svg",
     color: "#635BFF",
   },
+  sanity: {
+  name: "Sanity",
+  logo: "/icons/sanity.svg",
+  color: "#F03E2F", // official red
+},
+strapi: {
+  name: "Strapi",
+  logo: "/icons/strapi.svg",
+  color: "#4945FF", // official purple
+},
 };
