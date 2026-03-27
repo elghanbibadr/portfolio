@@ -74,7 +74,8 @@ export function Projects({ range, exclude }: ProjectsProps) {
       link: "https://www.nuvia.me/",
       technologies: [
         "nextjs",
-        "tailwind"
+        "tailwind",
+        "i18n"
       ],
     },
     content: `
@@ -88,6 +89,29 @@ Nüvia is a concept for a next-generation AI travel platform that simplifies the
 - Waitlist Form: Captures early users’ interest for exclusive access, discounts, and testing opportunities
 - Multi-Language Support: Content available in multiple languages for a global audience
 
+    `
+  },
+   {
+    slug: "SolarLocal",
+    metadata: {
+      title: "SolarLocal – Find the Best Solar Energy Deals",
+      summary: "SolarLocal helps homeowners across Australia find the best solar and battery storage deals effortlessly. The platform connects users with trusted local suppliers and includes a location search using the Google Maps Geolocation API.",
+      images: [
+        "/images/projects/project-01/solarlocal.png",
+        "/images/projects/project-01/solarlocal.png"
+      ],
+      team: [
+        { avatar: "/images/projects/project-01/solarlocal.png" }
+      ],
+      link: "https://www.solarlocalenergy.com/",
+      technologies: [
+        "nextjs",
+        "tailwind",
+        "recaptcha"
+      ]
+    },
+    content: `
+SolarLocal simplifies finding solar and battery deals across Australia. The platform features a **Google Maps geolocation search** to connect users with local installers quickly and efficiently.
     `
   },
 

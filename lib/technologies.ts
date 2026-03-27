@@ -14,6 +14,16 @@ export const TECHNOLOGIES = {
     logo: "/icons/tailwindcss.svg",
     color: "#38BDF8",
   },
+  recaptcha: {
+  name: "Google reCAPTCHA",
+  logo: "/icons/recaptcha.svg", // make sure you have the SVG saved at this path
+  color: "#4285F4", // Google blue
+},
+i18n: {
+  name: "next-intl",
+  logo: "/icons/next-intl.svg", // make sure you have the SVG saved at this path
+  color: "#fff", // dark/navy tone matching next-intl branding
+},
   supabase: {
     name: "Supabase",
     logo: "/icons/supabase.svg",
