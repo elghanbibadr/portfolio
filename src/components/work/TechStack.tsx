@@ -21,6 +21,7 @@ export const TechStack: React.FC<Props> = ({ items }) => {
             gap="8"
             style={{
               padding: "6px 10px",
+              marginBlock:"10px",
               borderRadius: "999px",
               background: "rgba(255,255,255,0.05)",
               border: `1px solid ${tech.color}30`,

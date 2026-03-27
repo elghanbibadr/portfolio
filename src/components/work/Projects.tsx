@@ -33,13 +33,13 @@ export function Projects({ range, exclude }: ProjectsProps) {
       { avatar: "/images/avatars/badr.png" },
     ],
     link: "https://mymilome.developpement.io/",
-      technologies: [
-        "Laravel",
-        "Php",
-        "Livwire",
-        "Tailwind Css",
-        "Sql",
-      ],
+     technologies: [
+  "laravel",
+  "php",
+  "livewire", // ✅ FIXED
+  "tailwind",
+  "sql",
+],
   },
   content: "Built with Laravel 12, Livewire 3, Alpine.js, and Tailwind CSS. Features include role-based access control, file/photo management with S3 storage, campaign creation, supplier document management, idea sharing between stores and central teams, and a fully responsive mobile-first interface.",
 },
@@ -54,13 +54,43 @@ export function Projects({ range, exclude }: ProjectsProps) {
       ],
       link: "https://playroom-www-v2.pages.dev/",
         technologies: [
-        "nextjs",
-        "supabase",
+        "react",
         "tailwind",
       ],
     },
     content: "I built a leads database SaaS with Supabase, Next.js, and Stripe integration for payments. Admins can upload leads and manage users, while customers can search, filter, and export data using credits.",
   },
+  {
+    slug: "Nuvia",
+    metadata: {
+      title: "Nüvia – AI-Powered Travel Planning Landing Page",
+      summary: "Nüvia is a concept for a next-generation AI travel platform that simplifies trip planning by creating fully personalized itineraries. The current implementation is a static, multi-language landing page showcasing the platform’s vision and allowing users to join the waitlist for early access.",
+      images: [
+"/images/projects/project-01/nuvia.png"       
+      ],
+      team: [
+        { avatar: "/images/projects/project-01/nuvia.png" }
+      ],
+      link: "https://www.nuvia.me/",
+      technologies: [
+        "nextjs",
+        "tailwind"
+      ],
+    },
+    content: `
+Nüvia is a concept for a next-generation AI travel platform that simplifies the way people plan trips. The current version is a static landing page with multi-language support and a waitlist form for early access.
+
+**Key Features Highlighted:**
+- AI Travel Concierge Concept: Demonstrates AI-driven personalized trip planning
+- Unified Travel Platform: Visualizes integration of flights, hotels, transfers, activities, and insurance
+- One-Click Booking & Smart Itinerary: Illustrates fully coordinated travel plans
+- Dynamic Price Monitoring & Personalized Recommendations: Highlights AI optimization and real-time suggestions
+- Waitlist Form: Captures early users’ interest for exclusive access, discounts, and testing opportunities
+- Multi-Language Support: Content available in multiple languages for a global audience
+
+    `
+  },
+
   {
     slug: "Pursit Portal",
     metadata: {
@@ -75,6 +105,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
         "nextjs",
         "supabase",
         "tailwind",
+        "stripe"
       ],
     },
     content: "I developed a platform for auto dealerships using Next.js, Supabase, and Tailwind. Admins can manage dealers, upload invoices, and define buying rules. Dealers can track cars purchased and download invoices.",
@@ -94,6 +125,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
         "nextjs",
         "supabase",
         "tailwind",
+        "stripe"
       ],
     },
     content: "Built with Next.js, Supabase, and Google Maps API, this app allows users to create trips, calculate stay durations, and manage locations seamlessly.",
@@ -108,11 +140,13 @@ export function Projects({ range, exclude }: ProjectsProps) {
       team: [
         { avatar: "/images/avatars/badr.png" },
       ],
-      link: "https://git00027-1.onrender.com/",
+      link: "https://lagriffe.io/",
         technologies: [
-        "nextjs",
-        "supabase",
+        "laravel",
+        "php",
         "tailwind",
+        "inertia",
+        "react"
       ],
     },
     content: "Designed and developed my personal portfolio using Next.js, Tailwind, and Framer Motion animations for smooth transitions.",

@@ -1,8 +1,8 @@
 export const TECHNOLOGIES = {
   nextjs: {
     name: "Next.js",
-    logo: "/icons/nextdotjs.svg",
-    color: "#000000",
+    logo: "/icons/nextjs.svg",
+    color: "#fff",
   },
   react: {
     name: "React",
@@ -39,6 +39,11 @@ export const TECHNOLOGIES = {
     logo: "/icons/mysql.svg",
     color: "#336791",
   },
+  inertia: {
+  name: "Inertia.js",
+  logo: "/icons/inertia.svg", // official SVG downloaded from GitHub
+  color: "#6366F1", // fallback color if needed
+},
 
   // ✅ NEW
   framer: {
