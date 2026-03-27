@@ -10,6 +10,8 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import { TECHNOLOGIES } from "../../lib/technologies";
+import { TechStack } from "./work/TechStack";
 
 interface ProjectCardProps {
   href: string;
@@ -18,6 +20,8 @@ interface ProjectCardProps {
   title: string;
   content: string;
   description: string;
+    technologies?: string[];
+
   avatars: { src: string }[];
   link: string;
 }
@@ -28,6 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   content,
   description,
+  technologies,
   avatars,
   link,
 }) => {
@@ -71,6 +76,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {description}
           </Text>
         )}
+        {/* 👇 ADD HERE */}
+{TECHNOLOGIES && technologies && technologies.length > 0 && (
+  <TechStack items={technologies} />
+)}
         <Flex gap="24" wrap>
 
           {link && (
