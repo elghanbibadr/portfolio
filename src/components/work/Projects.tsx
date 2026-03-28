@@ -114,6 +114,26 @@ Nüvia is a concept for a next-generation AI travel platform that simplifies the
 SolarLocal simplifies finding solar and battery deals across Australia. The platform features a **Google Maps geolocation search** to connect users with local installers quickly and efficiently.
     `
   },
+   {
+    slug: "LaGriffe.io",
+    metadata: {
+      title: "LaGriffe.io",
+      summary: "LaGriffe.io is a hybrid agency that combines conversational AI (LLM) with premium creative talent. The platform evaluates each brief, assembles the ideal team, and delivers solutions through flexible subscriptions, turnkey packages, or one-shot assets. Built with a Strapi backend and integrated chatbot,",
+      images: ["/images/projects/project-01/h45.GIF"],
+      team: [
+        { avatar: "/images/avatars/badr.png" },
+      ],
+      link: "https://lagriffe.io/",
+        technologies: [
+        "laravel",
+        "php",
+        "tailwind",
+        "inertia",
+        "react"
+      ],
+    },
+    content: "Designed and developed my personal portfolio using Next.js, Tailwind, and Framer Motion animations for smooth transitions.",
+  },
 
   {
     slug: "Pursit Portal",
@@ -155,26 +175,7 @@ SolarLocal simplifies finding solar and battery deals across Australia. The plat
     content: "Built with Next.js, Supabase, and Google Maps API, this app allows users to create trips, calculate stay durations, and manage locations seamlessly.",
   },
  
-  {
-    slug: "LaGriffe.io",
-    metadata: {
-      title: "LaGriffe.io",
-      summary: "LaGriffe.io is a hybrid agency that combines conversational AI (LLM) with premium creative talent. The platform evaluates each brief, assembles the ideal team, and delivers solutions through flexible subscriptions, turnkey packages, or one-shot assets. Built with a Strapi backend and integrated chatbot,",
-      images: ["/images/projects/project-01/h45.GIF"],
-      team: [
-        { avatar: "/images/avatars/badr.png" },
-      ],
-      link: "https://lagriffe.io/",
-        technologies: [
-        "laravel",
-        "php",
-        "tailwind",
-        "inertia",
-        "react"
-      ],
-    },
-    content: "Designed and developed my personal portfolio using Next.js, Tailwind, and Framer Motion animations for smooth transitions.",
-  },
+ 
 ];
 
   return (
