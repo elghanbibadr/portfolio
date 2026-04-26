@@ -65,14 +65,15 @@ const home: Home = {
   },
   subline: (
     <>
-    I’m Badr, a front-end engineer crafting intuitive, user-focused web apps,
+    I’m Badr, a SaaS builder focused on crafting intuitive, user-centered web applications.
+
       {/* <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       /> */}
     
-      <br />  In my spare time, I bring my own ideas to life through side projects.
+      <br />  I turn ideas into scalable products, building and launching my own tools in my spare time.
     </>
   ),
 };

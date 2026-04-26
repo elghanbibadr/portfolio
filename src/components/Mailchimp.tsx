@@ -70,7 +70,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({
 
     console.log("form", form);
 
-    return;
+    // return;
 
     try {
       const response = await fetch("/api/send-email", {
