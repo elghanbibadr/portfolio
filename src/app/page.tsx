@@ -46,7 +46,7 @@ export default function Home() {
             <RevealFx
               fillWidth
               horizontal="center"
-              paddingTop="16"
+              paddingTop="1"
               paddingBottom="32"
               paddingLeft="12"
             >
@@ -63,13 +63,13 @@ export default function Home() {
               </Badge>
             </RevealFx>
           )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="12">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+            <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
               {home.subline}
             </Text>
           </RevealFx>
