@@ -3,6 +3,8 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+
+console.log("api key",process.env.RESEND_API_KEY)
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json()
@@ -15,8 +17,8 @@ export async function POST(req: NextRequest) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>', // change after verifying your domain
-      to:   process.env.YOUR_EMAIL!,
+from: 'Contact <hello@badrghanbi.com>',   
+   to:   process.env.YOUR_EMAIL!,
       replyTo: email,                                    // reply goes directly to the sender
       subject: `New message from ${name}`,
       html: `

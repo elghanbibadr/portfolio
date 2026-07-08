@@ -81,6 +81,8 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({
         body: JSON.stringify(form),
       });
 
+      console.log("res",response)
+
       if (response.ok) {
         setStatus("success");
         setName("");
