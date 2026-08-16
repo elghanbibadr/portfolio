@@ -24,40 +24,35 @@ export function Projects({ range, exclude }: ProjectsProps) {
     : sortedProjects;
  const displayedProjects2 = [
     {
-  slug: "HireBoost",
+  slug: "nyc dentist",
   metadata: {
-    title: "HireBoost",
-    summary: "Built an AI-powered resume analyzer that evaluates how well a resume matches a specific job description. The tool identifies missing keywords, calculates a match score, and suggests improved bullet points. Designed to help job seekers optimize their resumes and increase their chances of getting interviews.",
-    images: ['/images/projects/project-01/hireboost.png'],
+    title: "NYC Dentist",
+summary: "Built a modern, high-converting dental practice website engineered for maximum patient bookings and local search visibility. Features seamless online appointment scheduling, mobile-optimized patient workflows, clear service offerings, and fast page load speeds.",       images: ['/images/projects/project-01/nycdental.png'],
+
     team: [
       { avatar: "/images/avatars/badr.png" },
     ],
-    link: "https://hireboost-one.vercel.app/",
+    link: "https://preview--tooth-tastic-transformation.lovable.app/",
      technologies: [
   "nextjs",
-  "supabase",
-  "stripe", // ✅ FIXED
   "tailwind",
 ],
   },
   content: "Built with Laravel 12, Livewire 3, Alpine.js, and Tailwind CSS. Features include role-based access control, file/photo management with S3 storage, campaign creation, supplier document management, idea sharing between stores and central teams, and a fully responsive mobile-first interface.",
 },
   {
-  slug: "MyMiLOME",
+slug: "sky-dental-nyc",
   metadata: {
-    title: "MyMiLOME",
-    summary: "A full-stack store management platform built for retail franchise networks. Manage content, ideas, campaigns, suppliers, and documents — all in one centralized platform tailored for store owners and central teams.",
-    images: ['/images/projects/project-01/mymilome.png'],
+title: "Sky Dental NYC",
+summary: "Designed and developed a custom, high-converting website for Sky Dental NYC in the Financial District. Features clean typography, an intuitive navigation layout, local area targeting, and streamlined CTA buttons for instant patient calling and appointment booking.",  
+  images: ["/images/skydental.png"],
     team: [
-      { avatar: "/images/avatars/badr.png" },
+      { avatar: "/images/skydental.png" },
     ],
-    link: "https://mymilome.developpement.io/",
-     technologies: [
-  "laravel",
-  "php",
-  "livewire", // ✅ FIXED
+    link: "https://preview--sky-shine-update.lovable.app/",
+      technologies: [
+  "nextjs",
   "tailwind",
-  "sql",
 ],
   },
   content: "Built with Laravel 12, Livewire 3, Alpine.js, and Tailwind CSS. Features include role-based access control, file/photo management with S3 storage, campaign creation, supplier document management, idea sharing between stores and central teams, and a fully responsive mobile-first interface.",
