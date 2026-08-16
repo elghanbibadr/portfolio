@@ -4,12 +4,15 @@ export {
   social,
   newsletter,
   home,
+  services, // <--- Add this
+  agency,   // <--- Add this
   about,
   blog,
   work,
   gallery,
   contact
 } from "./content";
+
 
 export {
   display,

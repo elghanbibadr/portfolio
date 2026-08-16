@@ -1,0 +1,48 @@
+.avatar {
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.blockAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textAlign {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .avatar {
+    position: relative !important;
+    top: 0 !important;
+    width: 100%;
+  }
+
+  .textAlign {
+    text-align: center;
+  }
+
+  .blockAlign {
+    align-items: center;
+  }
+}
+
+.servicesMenu {
+  // CRITICAL FIX: Ensures the menu sits BEHIND the main content column
+  z-index: 1;
+}
+
+
+.actionCard {
+  // CRITICAL FIX: Ensures the card is a distinct stacking context with solid background
+  z-index: 10;
+  border: 1px solid var(--neutral-border-weak);
+  
+  // Necessary for mobile view when sticky becomes relative
+  @media (max-width: 768px) {
+    z-index: 1; 
+  }
+}
+

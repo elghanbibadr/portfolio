@@ -11,7 +11,7 @@ import {
   Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
+import { home, about, person, baseURL, routes, services, agency } from "@/resources";
 import { Mailchimp } from "@/components";
 
 export async function generateMetadata() {
@@ -88,11 +88,11 @@ export default function Home() {
                   <Avatar
                     marginRight="8"
                     style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
+                    src={agency.logo}
                     size="m"
                   />
                 )}
-                {about.title}
+                about BG-Dental tech
               </Row>
             </Button>
           </RevealFx>

@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Button,
   Column,
   Heading,
@@ -12,60 +11,63 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
-import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
+import { baseURL, services, agency, social } from "@/resources";
+import TableOfContents from "@/components/services/TableOfContents";
+import styles from "@/components/services/services.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: about.title,
-    description: about.description,
+    title: services.title,
+    description: services.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
-    path: about.path,
+    image: `/api/og/generate?title=${encodeURIComponent(services.title)}`,
+    path: services.path,
   });
 }
 
-export default function About() {
+export default function Services() {
   const structure = [
     {
-      title: about.intro.title,
-      display: about.intro.display,
+      title: services.intro.title,
+      display: services.intro.display,
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      title: services.core.title,
+      display: services.core.display,
+      items: services.core.items.map((item) => item.name),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      title: services.tech.title,
+      display: services.tech.display,
+      items: services.tech.solutions.map((tech) => tech.title),
     },
     {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      title: services.process.title,
+      display: services.process.display,
+      items: services.process.steps.map((step) => step.title),
     },
   ];
+
   return (
     <Column maxWidth="m">
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title={about.title}
-        description={about.description}
-        path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
+        title={services.title}
+        description={services.description}
+        path={services.path}
+        image={`/api/og/generate?title=${encodeURIComponent(services.title)}`}
         author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          name: agency.name,
+          url: `${baseURL}${services.path}`,
+          image: `${baseURL}${agency.logo}`,
         }}
       />
-      {about.tableOfContent.display && (
+
+      {/* Table of Contents Navigation */}
+      {services.tableOfContent.display && (
         <Column
           left="0"
           style={{ top: "50%", transform: "translateY(-50%)" }}
@@ -74,11 +76,13 @@ export default function About() {
           gap="32"
           s={{ hide: true }}
         >
-          <TableOfContents structure={structure} about={about} />
+          <TableOfContents structure={structure} services={services} />
         </Column>
       )}
+
       <Row fillWidth s={{ direction: "column" }} horizontal="center">
-        {about.avatar.display && (
+        {/* Sticky Sidebar Action Card */}
+        {services.sidebar.display && (
           <Column
             className={styles.avatar}
             position="sticky"
@@ -91,31 +95,54 @@ export default function About() {
             flex={3}
             horizontal="center"
           >
-            <Avatar src={person.avatar} size="xl" />
-            <Row gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
-            </Row>
-            {person.languages && person.languages.length > 0 && (
-              <Row wrap gap="8">
-                {person.languages.map((language, index) => (
-                  <Tag key={index} size="l">
-                    {language}
-                  </Tag>
-                ))}
-              </Row>
-            )}
+<Media
+  src={agency.logo}
+  alt={agency.name}
+  radius="full"
+  style={{ 
+    width: "140px", 
+    height: "140px", 
+    maxWidth: "140px",
+    maxHeight: "140px",
+    objectFit: "cover" 
+  }}
+/>
+
+             {/* <Heading variant="heading-strong-s" align="center">
+              Dental Tech & Growth
+            </Heading>  */}
+            {/* <Text
+              variant="body-default-s"
+              onBackground="neutral-weak"
+              align="center"
+            >
+              Helping dental practices scale patient bookings through high-performing tech.
+            </Text> */}
+ 
+            <Button
+              href={services.calendar.link}
+              prefixIcon="calendar"
+              label="Book Audit Call"
+              size="m"
+              variant="primary"
+              // fillWidth
+            /> 
+
+        
           </Column>
         )}
+
+        {/* Main Content Area */}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          {/* Hero Section */}
           <Column
-            id={about.intro.title}
+            id={services.intro.title}
             fillWidth
             minHeight="160"
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {services.calendar.display && (
               <Row
                 fitWidth
                 border="brand-alpha-medium"
@@ -130,124 +157,83 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
+                <Icon paddingLeft="12" name="sparkles" onBackground="brand-weak" />
+                
+                {/* 🛠️ Flex Fix: Text and Icon now share this Row parent */}
+                <Row>
+                  <Row paddingX="8">
+                    Free Dental Practice Tech & SEO Audit
+                  </Row>
+                  <IconButton
+                    href={services.calendar.link}
+                    data-border="rounded"
+                    variant="secondary"
+                    icon="chevronRight"
+                  />
+                </Row>
               </Row>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
+
+            {/* 🛠️ Typography Size Fix: headline-strong-xl */}
+            <Heading className={styles.textAlign}>
+              Digital Solutions Built Specifically for Dental Clinics
             </Heading>
+
+            {/* 🛠️ Typography Size Fix: body-default-l */}
             <Text
               className={styles.textAlign}
-              variant="display-default-xs"
+              variant="body-default-l"
               onBackground="neutral-weak"
+              paddingTop="s"
             >
-              {person.role}
+              High-converting custom web development, local SEO domination, patient booking integrations, and HIPAA-compliant tech infrastructure.
             </Text>
-            {social.length > 0 && (
-              <Row
-                className={styles.blockAlign}
-                paddingTop="20"
-                paddingBottom="8"
-                gap="8"
-                wrap
-                horizontal="center"
-                fitWidth
-                data-border="rounded"
-              >
-                {social.map(
-                  (item) =>
-                    item.link && (
-                      <React.Fragment key={item.name}>
-                        <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
-                        </Row>
-                        <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
-                        </Row>
-                      </React.Fragment>
-                    ),
-                )}
-              </Row>
-            )}
           </Column>
 
-          {about.intro.display && (
+          {/* Intro Overview Text */}
+          {services.intro.display && (
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
+              {services.intro.description}
             </Column>
           )}
 
-          {about.work.display && (
+          {/* Core Growth Services (Website Tiers including Express & Custom) */}
+          {services.core.display && (
             <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                {about.work.title}
+              <Heading as="h2" id={services.core.title} variant="display-strong-s" marginBottom="m">
+                {services.core.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
+                {services.core.items.map((service, index) => (
+                  <Column key={`${service.name}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
+                      <Text id={service.name} variant="heading-strong-l">
+                        {service.name}
                       </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
+                      <Text variant="heading-default-xs" onBackground="brand-weak">
+                        {service.deliverableTime}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
+                    <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m">
+                      {service.tagline}
                     </Text>
                     <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: React.ReactNode, index: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        ),
-                      )}
+                      {service.features.map((feature: React.ReactNode, fIndex: number) => (
+                        <Text
+                          as="li"
+                          variant="body-default-m"
+                          key={`${service.name}-${fIndex}`}
+                        >
+                          {feature}
+                        </Text>
+                      ))}
                     </Column>
-                    {experience.images && experience.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
-                        {experience.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
+                    {service.deliverables && service.deliverables.length > 0 && (
+                      <Row wrap gap="8" paddingTop="m">
+                        {service.deliverables.map((item, dIndex) => (
+                          <Tag key={dIndex} size="m" variant="neutral">
+                            {item}
+                          </Tag>
                         ))}
                       </Row>
                     )}
@@ -257,75 +243,62 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.technical.display && (
+          {/* Dental Tech Integration & Technical Infrastructure */}
+          {services.tech.display && (
             <>
               <Heading
                 as="h2"
-                id={about.technical.title}
+                id={services.tech.title}
                 variant="display-strong-s"
                 marginBottom="40"
               >
-                {about.technical.title}
+                {services.tech.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text id={skill.title} variant="heading-strong-l">
-                      {skill.title}
+                {services.tech.solutions.map((solution, index) => (
+                  <Column key={`${solution.title}-${index}`} fillWidth gap="4">
+                    <Text id={solution.title} variant="heading-strong-l">
+                      {solution.title}
                     </Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
+                      {solution.description}
                     </Text>
-                    {skill.tags && skill.tags.length > 0 && (
+                    {solution.tags && solution.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
-                        {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                        {solution.tags.map((tag, tagIndex) => (
+                          <Tag key={`${solution.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
                             {tag.name}
                           </Tag>
                         ))}
                       </Row>
                     )}
-                    {skill.images && skill.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
-                    )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* How We Work / Process Section */}
+          {services.process.display && (
+            <>
+              <Heading
+                as="h2"
+                id={services.process.title}
+                variant="display-strong-s"
+                marginTop="xl"
+                marginBottom="m"
+              >
+                {services.process.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {services.process.steps.map((step, index) => (
+                  <Column key={`${step.title}-${index}`} fillWidth gap="4">
+                    <Text id={step.title} variant="heading-strong-l">
+                      0{index + 1}. {step.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {step.description}
+                    </Text>
                   </Column>
                 ))}
               </Column>

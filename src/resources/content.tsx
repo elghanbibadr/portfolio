@@ -49,7 +49,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Turning ideas into seamless web experiences</>,
+  headline: <>Helping dental  practices 🦷 build a stronger online presence</>,
   featured: {
     display: true,
     title: (
@@ -65,15 +65,14 @@ const home: Home = {
   },
   subline: (
     <>
-    I’m Badr, a SaaS builder focused on crafting intuitive, user-centered web applications.
-
+I help dental practices improve their websites, make it easier for patients to find what they need, and create a better online experience.
       {/* <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       /> */}
     
-      <br />  I turn ideas into scalable products, building and launching my own tools in my spare time.
+      <br />  
     </>
   ),
 };
@@ -343,4 +342,113 @@ const gallery: Gallery = {
   ],
 };
 
+// Add these to your resources/content.ts
+
+export const agency = {
+  name: "DentalTech Agency",
+  logo: "/images/bgde1.jpg", // Path to your logo image
+  certifications: ["HIPAA Compliant", "Google Premier Partner"],
+};
+
+export const services = {
+  title: "Dental Practice Web & Growth Services",
+  description: "Custom web development, local SEO, and practice management integrations engineered specifically for dental clinics.",
+  path: "/services",
+  calendar: {
+    display: true,
+    link: "https://cal.com/your-clinic-audit", // Update with your scheduling link
+  },
+  sidebar: {
+    display: true,
+  },
+  tableOfContent: {
+    display: true,
+  },
+  intro: {
+    display: true,
+    title: "Overview",
+    description: "We build modern, fast, patient-converting websites and local SEO strategies that help dental practices dominate their local markets and automate booking workflows.",
+  },
+  core: {
+    display: true,
+    title: "Core Services",
+    items: [
+      {
+        // NEW EXPRESS SERVICE
+        name: "Express Clinic Landing Page",
+        deliverableTime: "1 Week Launch",
+        tagline: "Essential online presence for new clinics or satellite locations.",
+        features: [
+          "Single-page mobile-responsive design tailored to your branding.",
+          "Embedded Google Map integration for easy patient navigation.",
+          "Simple contact form directing inquiries straight to your inbox.",
+        ],
+        deliverables: ["1-Page Build", "Google Map Setup", "Standard Contact Form"],
+      },
+      {
+        name: "Custom Clinic Web Development",
+        deliverableTime: "3-4 Weeks",
+        tagline: "High-speed, conversion-focused websites built on modern frameworks.",
+        features: [
+          "Mobile-first responsive design optimized for emergency and high-intent patients.",
+          "Direct integration with PMS software like OpenDental, Dentrix, or NexHealth.",
+          "HIPAA-compliant patient intake forms and online booking.",
+        ],
+        deliverables: ["Custom UI/UX", "Next.js Build", "EHR Sync", "Sub-second Load Speed"],
+      },
+      {
+        name: "Dental SEO & Local Maps Domination",
+        deliverableTime: "Monthly Growth",
+        tagline: "Rank at the top of Google Map Packs when local patients search for care.",
+        features: [
+          "Local dental schema markup for procedures, geographic tags, and reviews.",
+          "Google Business Profile optimization to capture top 'Dentist Near Me' rankings.",
+          "High-intent local content targeting implants, Invisalign, and general care.",
+        ],
+        deliverables: ["Local SEO", "Google Maps Domination", "Dental Schema", "Review Growth"],
+      },
+    ],
+  },
+  tech: {
+    display: true,
+    title: "Clinic Tech Infrastructure",
+    solutions: [
+      {
+        title: "PMS & Online Scheduling Integration",
+        description: "Seamlessly connect your front desk software straight to your website to accept 24/7 online appointments.",
+        tags: [
+          { name: "OpenDental", icon: "code" },
+          { name: "Dentrix", icon: "check" },
+          { name: "NexHealth", icon: "link" },
+        ],
+      },
+      {
+        title: "Automated Patient Reviews & Retention",
+        description: "Automate post-appointment SMS and email review requests to continuously build 5-star Google feedback.",
+        tags: [
+          { name: "Review Sync", icon: "star" },
+          { name: "SMS Reminders", icon: "phone" },
+        ],
+      },
+    ],
+  },
+  process: {
+    display: true,
+    title: "Our Process",
+    steps: [
+      {
+        title: "Practice Audit & Tech Assessment",
+        description: "We review your current site speed, ranking profile, and PMS setup.",
+      },
+      {
+        title: "Custom Build & Integrations",
+        description: "We design and build your web platform and hook up online scheduling.",
+      },
+      {
+        title: "Launch & Local SEO Push",
+        description: "We launch your site, deploy local schema, and boost local map listings.",
+      },
+    ],
+  },
+};
 export { person, social, newsletter, home, about, blog, work, gallery,contact};
