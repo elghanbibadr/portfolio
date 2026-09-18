@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Badr",
   lastName: "Ghanbi",
   name: `Badr Ghanbi`,
-  role: "Front End Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "bghanbi50@gmail.com",
   location: "Africa/Casablanca", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -61,7 +61,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "https://www.upwork.com/freelancers/~015c5fa1a95af5c54d",
+    href: "",
   },
   subline: (
     <>
