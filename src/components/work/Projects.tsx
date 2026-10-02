@@ -23,6 +23,27 @@ export function Projects({ range, exclude }: ProjectsProps) {
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
     : sortedProjects;
  const displayedProjects2 = [
+  {
+  slug: "MailFrog AI",
+  metadata: {
+    title: "MailFrog AI",
+    summary: "MailFrog AI is an AI-powered SaaS that helps businesses generate personalized cold emails from lead information and context. I built the application with Next.js, Supabase, and AI integration, including authentication, user management, email generation, templates, and usage tracking.",
+    images: ["/images/projects/project-01/mailfrogai2.png"],
+    team: [
+      { avatar: "/images/avatars/badr.png" },
+    ],
+    link: "https://mailfrogai.vercel.app/",
+    technologies: [
+      "nextjs",
+      "typescript",
+      "supabase",
+      "ai",
+      "stripe",
+      "tailwind",
+    ],
+  },
+  content: "I built MailFrog AI, an AI-powered cold email generation SaaS. Users can provide lead information, company details, and additional context to generate personalized outreach emails. The platform includes Supabase authentication, user profiles, reusable email templates, AI-powered generation, and usage management."
+},
     {
   slug: "HireBoost",
   metadata: {
