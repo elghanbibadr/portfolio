@@ -32,7 +32,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
     team: [
       { avatar: "/images/avatars/badr.png" },
     ],
-    link: "https://mailfrogai.vercel.app/",
+    link: "https://mailfrogai-wxvh.vercel.app/",
     technologies: [
       "nextjs",
       "typescript",
