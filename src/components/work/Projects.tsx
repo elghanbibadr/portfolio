@@ -24,6 +24,47 @@ export function Projects({ range, exclude }: ProjectsProps) {
     : sortedProjects;
  const displayedProjects2 = [
   {
+  slug: "CareerFinder",
+  metadata: {
+    title: "CareerFinder",
+    summary: "CareerFinder helps job seekers automatically discover company careers pages, hiring platforms, open positions, and recruitment emails from up to 10 URLs. Built with Next.js, TypeScript, and Cheerio using web scraping, HTML parsing, and sitemap analysis.",
+    images: ["/images/projects/project-01/image.png"],
+    team: [
+      { avatar: "/images/avatars/badr.png" },
+    ],
+    link: "https://carrerfinder.vercel.app/",
+    technologies: [
+      "nextjs",
+      "typescript",
+      "ai",
+      "web-scraping",
+      "tailwind",
+      "api-integration",
+    ],
+  },
+  content: "I built CareerFinder to simplify the process of finding job opportunities through direct company applications. Users can submit multiple company websites, and the application automatically scans their homepages, navigation links, common URL patterns, and XML sitemaps to discover careers pages. It also detects external applicant tracking systems such as Greenhouse, Lever, Workable, Ashby, BambooHR, and Recruitee. The application analyzes careers page content to identify potential open positions, extracts publicly available recruitment contact emails, and returns structured results with discovery sources and verification statuses. I also implemented URL validation, request timeouts, and DNS-based private IP protection to improve scanning security."
+},
+
+    {
+  slug: "HireBoost",
+  metadata: {
+    title: "HireBoost",
+    summary: "Built an AI-powered resume analyzer that evaluates how well a resume matches a specific job description. The tool identifies missing keywords, calculates a match score, and suggests improved bullet points. Designed to help job seekers optimize their resumes and increase their chances of getting interviews.",
+    images: ['/images/projects/project-01/hireboost.png'],
+    team: [
+      { avatar: "/images/avatars/badr.png" },
+    ],
+    link: "https://hireboost-one.vercel.app/",
+     technologies: [
+  "nextjs",
+  "supabase",
+  "stripe", // ✅ FIXED
+  "tailwind",
+],
+  },
+  content: "Built with Laravel 12, Livewire 3, Alpine.js, and Tailwind CSS. Features include role-based access control, file/photo management with S3 storage, campaign creation, supplier document management, idea sharing between stores and central teams, and a fully responsive mobile-first interface.",
+},
+  {
   slug: "MailFrog AI",
   metadata: {
     title: "MailFrog AI",
@@ -43,25 +84,6 @@ export function Projects({ range, exclude }: ProjectsProps) {
     ],
   },
   content: "I built MailFrog AI, an AI-powered cold email generation SaaS. Users can provide lead information, company details, and additional context to generate personalized outreach emails. The platform includes Supabase authentication, user profiles, reusable email templates, AI-powered generation, and usage management."
-},
-    {
-  slug: "HireBoost",
-  metadata: {
-    title: "HireBoost",
-    summary: "Built an AI-powered resume analyzer that evaluates how well a resume matches a specific job description. The tool identifies missing keywords, calculates a match score, and suggests improved bullet points. Designed to help job seekers optimize their resumes and increase their chances of getting interviews.",
-    images: ['/images/projects/project-01/hireboost.png'],
-    team: [
-      { avatar: "/images/avatars/badr.png" },
-    ],
-    link: "https://hireboost-one.vercel.app/",
-     technologies: [
-  "nextjs",
-  "supabase",
-  "stripe", // ✅ FIXED
-  "tailwind",
-],
-  },
-  content: "Built with Laravel 12, Livewire 3, Alpine.js, and Tailwind CSS. Features include role-based access control, file/photo management with S3 storage, campaign creation, supplier document management, idea sharing between stores and central teams, and a fully responsive mobile-first interface.",
 },
   {
   slug: "MyMiLOME",
